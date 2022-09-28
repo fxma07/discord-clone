@@ -24,5 +24,5 @@ module.exports = router;
 
 // test route to verify if our middleware is working
 router.get('/test', auth, (req, res) => {
-    res.send('request passed')
+    res.send('request passed');
 })
