@@ -2,7 +2,7 @@ import { authActions } from "../actions/authActions";
 
 const initState = {
     userDetails: null
-}
+};
 
 const reducer = (state = initState, action) => {
     switch (action.type) {

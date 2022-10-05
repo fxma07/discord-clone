@@ -20,9 +20,11 @@ router.post('/register', validator.body(registerSchema), authControllers.control
 
 router.post('/login', validator.body(loginSchema), authControllers.controllers.postLogin);
 
-module.exports = router;
+
 
 // test route to verify if our middleware is working
 router.get('/test', auth, (req, res) => {
     res.send('request passed');
-})
+});
+
+module.exports = router;

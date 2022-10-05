@@ -25,4 +25,4 @@ mongoose.connect(process.env.MONGO_URI)
 })
 .catch(err => {
     console.log('Database connection failed. Server not started.');
-})
+});

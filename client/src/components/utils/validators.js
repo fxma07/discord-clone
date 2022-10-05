@@ -23,4 +23,4 @@ const validatePassword = (password) => {
 
 const validateUsername = (username) => {
     return username.length > 2 && username.length < 13;
-}
+};
