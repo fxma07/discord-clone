@@ -48,7 +48,7 @@ function PendingInvitationListItem({
               >
               {username}
               </Typography>
-              <InvitationDecisionButtons 
+            <InvitationDecisionButtons 
             disabled={buttonDisabled}
             acceptInvitationHandler={handleAcceptInvitation}
             rejectInvitationHandler={handleRejectInvitation}

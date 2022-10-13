@@ -5,8 +5,9 @@ import { DialogActions, DialogTitle, Typography } from '@mui/material';
 import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText';
 import InputWithLabel from '../../components/InputWithLabel';
-import CustomPrimaryButton from '../../components/CustomPrimaryButton';
-
+import CustomPrimaryButton from '../../components/CustomPrimaryButton'; 
+import { connect } from 'react-redux';
+import { getActions } from '../../store/actions/friendsActions';
 
 function AddFriendDialog({
     isDialogOpen,
@@ -18,7 +19,11 @@ function AddFriendDialog({
 
     const handleSentInvitation = () => {
         //send friend request to server
-    }
+        sendFriendInvitation({
+            targetMailAddress: mail,
+        }, handleCloseDialog
+    );
+    }    
 
     const handleCloseDialog = () => {
        closeDialogHandler();
@@ -39,6 +44,7 @@ function AddFriendDialog({
                 style: {
                 backgroundColor: '#36393f',
                 boxShadow: 'none',
+                color: 'white',
                 },
             }}
 
@@ -48,7 +54,7 @@ function AddFriendDialog({
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    <Typography>Enter e-mail address of friend</Typography>
+                    <Typography style={{color: 'white'}}>Enter e-mail address of friend</Typography>
                 </DialogContentText>
                 <InputWithLabel 
                         label='Mail'
@@ -75,4 +81,10 @@ function AddFriendDialog({
   );
 };
 
-export default AddFriendDialog
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch),
+    };
+}
+
+export default connect(null, mapActionsToProps)(AddFriendDialog);
