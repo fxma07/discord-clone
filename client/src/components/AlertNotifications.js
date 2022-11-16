@@ -2,7 +2,7 @@ import React from 'react';
 import Alert from '@mui/material/Alert';
 import { Snackbar } from '@mui/material';
 import { connect } from 'react-redux';
-import { getActions } from '../store/actions/authActions';
+import { getActions } from '../store/actions/alertActions';
 
 const AlertNotification = ({showAlertMessage, closeAlertMessage, alertMessageContent}) => {
     return (
@@ -10,7 +10,7 @@ const AlertNotification = ({showAlertMessage, closeAlertMessage, alertMessageCon
             anchorOrigin={{ vertical: 'bottom', horizontal: 'center'}}
             open={showAlertMessage}
             onClose={closeAlertMessage}
-            autoHideDuraton={6000}
+            autoHideDuraton={3000}
         >
             <Alert severity='info'>{alertMessageContent}</Alert>
         </Snackbar>

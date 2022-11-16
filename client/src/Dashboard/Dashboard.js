@@ -22,6 +22,7 @@ function Dashboard({setUserDetails}) {
     if(!userDetails){
       logout();
     }else{
+      //eslint-disable-next-line
       setUserDetails = (JSON.parse(userDetails));
       connectWithSocketServer(JSON.parse(userDetails));
     }
