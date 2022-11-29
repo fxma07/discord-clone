@@ -10,7 +10,7 @@ const additionalStyles = {
     background: '#3ba55d',
 };
 
-function AddFriendButton() {
+const AddFriendButton = () => {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     
     const handleOpenAddFriendDialog = () => {

@@ -4,6 +4,7 @@ import RedirectInfo from '../../components/RedirectInfo'
 import { useNavigate } from 'react-router-dom';
 import { Tooltip } from '@mui/material';
 
+
 const getFormNotValidMessage = () => {
   return 'Enter correct e-mail address and password should contain between 6 and 12 characters';
 
@@ -13,11 +14,13 @@ const getFormValidMessage = () => {
   return 'Press to log in!';
 }
 
-function LoginPageFooter({ handleLogin, isFormValid }) {
+const LoginPageFooter = ({ handleLogin, isFormValid }) => {
     const navigate = useNavigate();
     const  handlePushToRegisterPage = () => {
        navigate('/register');
     }
+
+
   return (
     <>
       <Tooltip
@@ -29,6 +32,7 @@ function LoginPageFooter({ handleLogin, isFormValid }) {
               additionalStyles={{ marginTop: '30px'}}
               disabled={!isFormValid}
               onClick={handleLogin}
+              type='submit'
           />
         </div>
       </Tooltip>

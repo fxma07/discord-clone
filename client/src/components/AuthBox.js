@@ -11,7 +11,7 @@ const BoxWrapper = styled('div')({
     background: '#5865F2',
 });
 
-function AuthBox(props) {
+const AuthBox = (props) => {
   return (
     <div>
         <BoxWrapper>

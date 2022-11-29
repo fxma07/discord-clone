@@ -1,4 +1,3 @@
-const { disconnect } = require('mongoose');
 const serverStore = require('../serverStore');
 
 const disconnectHandler = (socket) => {

@@ -1,7 +1,8 @@
 import React from 'react'
 import InputWithLabel from '../../components/InputWithLabel'
 
-function LoginPageInputs({mail, setMail, password, setPassword}) {
+const LoginPageInputs = ({mail, setMail, password, setPassword}) => {
+
   return (
     <>
      <InputWithLabel

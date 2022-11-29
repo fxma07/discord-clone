@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { getActions } from '../../store/actions/authActions';
 import { useNavigate } from 'react-router-dom';
 
-function RegisterPage({ register }) {
+const RegisterPage = ({ register }) => {
     const navigate = useNavigate();
 
     const [mail, setMail] = useState('');

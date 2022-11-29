@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function LoginPage({ login }) {
+const LoginPage = ({ login }) => {
   const navigate = useNavigate();
   
   const [mail, setMail] = useState('');
@@ -31,9 +31,15 @@ function LoginPage({ login }) {
 
     login(userDetails, navigate);
   }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <AuthBox>
-      <LoginPageHeader/>
+    <AuthBox >
+    <form onSubmit={handleSubmit}>
+    <LoginPageHeader/>
       <LoginPageInputs 
         mail={mail}
         setMail={setMail}
@@ -41,6 +47,8 @@ function LoginPage({ login }) {
         setPassword={setPassword}
       />
       <LoginPageFooter isFormValid={isFormValid} handleLogin={handleLogin}/>
+    </form>
+      
     </AuthBox>
   );
 };

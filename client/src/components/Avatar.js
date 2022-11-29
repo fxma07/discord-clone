@@ -15,7 +15,7 @@ const AvatarPreview = styled('div')({
     borderRadius: '100%',
 });
 
-function Avatar({ username, large}) {
+const Avatar = ({ username, large}) => {
   return (
     <AvatarPreview
         style={large ? { height: '80px', width: '80px'} : {}}

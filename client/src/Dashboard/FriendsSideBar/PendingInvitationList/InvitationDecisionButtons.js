@@ -4,7 +4,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import { Box} from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
-function InvitationDecisionButtons({ disabled, acceptInvitationHandler, rejectInvitationHandler }) {
+const  InvitationDecisionButtons = ({ disabled, acceptInvitationHandler, rejectInvitationHandler }) => {
   return (
     <Box sx={{display: 'flex '}}> 
         <IconButton 

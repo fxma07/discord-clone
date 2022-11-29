@@ -12,7 +12,7 @@ const MainContainer = styled('div')({
     overflow: 'auto',
 });
 
-function PendingInvitationsList({pendingFriendsInvitations}) {
+const PendingInvitationsList = ({pendingFriendsInvitations}) => {
   return (
     <MainContainer>
       {pendingFriendsInvitations.map(invitation => (

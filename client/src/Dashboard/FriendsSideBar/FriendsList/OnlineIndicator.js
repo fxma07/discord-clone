@@ -2,7 +2,7 @@ import React from 'react';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { Box } from '@mui/material';
 
-function OnlineIndicator() {
+const OnlineIndicator = () => {
   return (
     <Box
         sx={{

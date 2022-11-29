@@ -3,11 +3,14 @@ import { Typography } from '@mui/material';
 import { connect } from 'react-redux';
 
 
-function ChosenOptionLabel({ name }) {
+const ChosenOptionLabel = ({ name }) => {
   return (
-    <Typography
+    <div>
+        <Typography
         sx={{ fontSize: '16px', color: 'white', fontWeight: 'bold'}}
     >{`${name ? name : ''}`}</Typography>
+
+    </div>
   );
 };
 

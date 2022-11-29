@@ -28,7 +28,7 @@ const Input = styled('input')({
     padding: '0 5px'
 });
 
-function InputWithLabel(props) {
+const InputWithLabel = (props) => {
     const {value, setValue, label, type, placeholder} = props;
     
     const handleValueChange = (event) => {

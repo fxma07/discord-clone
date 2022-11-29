@@ -14,7 +14,7 @@ const Maincontainer = styled('div')({
     backgroundColor: '#2F3136',
 });
 
-function FriendsSideBar() {
+const FriendsSideBar = () => {
   return (
     <Maincontainer>
       <AddFriendButton />

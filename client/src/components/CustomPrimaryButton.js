@@ -1,12 +1,13 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 
-function CustomPrimaryButton({
+const CustomPrimaryButton = ({
     label,
     additionalStyles,
     disabled,
     onClick,
-}) {
+    type
+}) => {
   return (
     <Button
     variant='contained'
@@ -22,6 +23,7 @@ function CustomPrimaryButton({
     style={additionalStyles ? additionalStyles: {}}
     disabled={disabled}
     onClick={onClick}
+    type={type}
     >
         {label}
     </Button>

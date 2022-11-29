@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 
 
 
-function FriendsListItem({ username, id, isOnline, setChosenChatDetails }) {
+const FriendsListItem = ({ username, id, isOnline, setChosenChatDetails }) => {
     const handleChooseActiveConversation = () => {
         setChosenChatDetails({ id: id, name: username }, chatTypes.DIRECT);
     }

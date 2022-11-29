@@ -10,9 +10,9 @@ const RedirectText = styled('span')({
     cursor: 'pointer',
 });
 
-function RedirectInfo({ 
+const RedirectInfo = ({ 
     text, redirectText, additionalStyles, redirectHandler
-}) {
+}) => {
   return (
     <Typography
     sx={{color: '#72767d'}}

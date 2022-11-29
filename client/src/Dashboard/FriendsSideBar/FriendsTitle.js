@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-function FriendsTitle({title}) {
+const FriendsTitle = ({title}) => {
   return (
     <Typography
         sx={{

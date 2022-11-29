@@ -5,13 +5,13 @@ import InvitationDecisionButtons from './InvitationDecisionButtons.js';
 import { connect } from 'react-redux';
 import { getActions } from '../../../store/actions/friendsActions';
 
-function PendingInvitationListItem({
+const PendingInvitationListItem = ({
   id,
   username,
   mail,
   acceptFriendInvitation = () => {},
   rejectFriendInvitation = () => {},
-}) {
+}) => {
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const handleAcceptInvitation = () => {

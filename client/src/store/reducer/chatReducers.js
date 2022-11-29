@@ -17,7 +17,7 @@ const reducer = (state = initState, action) => {
             };
         case chatActions.SET_MESSAGES:
             return {
-                ...state.chatType,
+                ...state,
                 messages: action.messages,
             };
         default:

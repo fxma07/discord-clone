@@ -1,7 +1,7 @@
 import React from 'react'
 import InputWithLabel from '../../components/InputWithLabel';
 
-function RegisterPageInputs(props) {
+const RegisterPageInputs = (props) => {
     const { mail, setMail, username, setUsername, password, setPassword} = props;
   return (
     <>

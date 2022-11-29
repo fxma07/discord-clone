@@ -6,19 +6,21 @@ const apiClient = axios.create({
     timeout: 1000,
   });
 
-apiClient.interceptors.request.use((config) => {
-  const userDetails = localStorage.getItem('user');
-
-  if (userDetails){
-    const token = JSON.parse(userDetails).token;
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-}, 
-(error) => {
-  return Promise.reject(error)
-});
+apiClient.interceptors.request.use(
+    (config) => {
+      const userDetails = localStorage.getItem("user");
+  
+      if (userDetails) {
+        const token = JSON.parse(userDetails).token;
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      console.log(config)
+      return config;
+    },
+    (err) => {
+      return Promise.reject(err);
+    }
+  );
 
 //public routes
 

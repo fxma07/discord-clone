@@ -1,18 +1,38 @@
 import React from 'react';
 import { styled } from '@mui/system';
+import { connect } from 'react-redux';
+import WelcomeMessage from './WelcomeMessage';
+import MessengerContent from './MessengerContent';
+import  AppBar  from '../AppBar/AppBar';
+
 
 const Maincontainer = styled('div')({
     flexGrow: 1,
     backgroundColor: '#36393f',
-    marginTop: '48px',
     display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
 });
 
-function Messenger() {
+const Messenger = ({ chosenChatDetails }) => {
   return (
-    <Maincontainer>
-    </Maincontainer>
+     <Maincontainer>
+       <AppBar />
+      {!chosenChatDetails ? (
+        <WelcomeMessage />
+      ) : (
+        <MessengerContent chosenChatDetails={chosenChatDetails} />
+      )}
+     </Maincontainer>
+   
+    
   )
 }
 
-export default Messenger
+const mapStoreStateToProps = ({ chat }) => {
+  return {
+    ...chat
+  }
+}
+
+export default connect(mapStoreStateToProps)(Messenger);

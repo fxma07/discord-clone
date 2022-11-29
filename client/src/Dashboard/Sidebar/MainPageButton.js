@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import GroupsIcon  from '@mui/icons-material/Groups';
 
-function MainPageButton() {
+const MainPageButton = () => {
   return (
     <Button
         style={{
